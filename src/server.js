@@ -43,8 +43,6 @@ app.use(express.json());
 app.use('/files', express.static(path.resolve(__dirname,'..', 'uploads')));
 app.use(routes);
 
-app.use(express.static(__dirname + '/public'));
-
 server.listen(process.env.PORT || 1119);
 
 //server.listen(1119);
