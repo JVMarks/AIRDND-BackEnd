@@ -60,3 +60,15 @@ server.listen(process.env.PORT || 1119);
 //^C fechar servidors
 //yarn add multer
 //yarn add socket.io
+
+
+//heroku criar um server 
+// heroku logs -a NOMEDOAPP para ver erros
+//GIT
+//CD 
+//GIT INIT
+//GIT ADD .
+//GIT ADD --ALL
+//GIT COMMIT -M "NOME DO COMMIT"
+//GIT PULL
+//GIT PUSH
