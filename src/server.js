@@ -1,8 +1,7 @@
 const express = require('express');
-const cors = require('cors');
 const mongoose = require('mongoose');
-const favicon = require('serve-favicon');
-const path = require ('path');
+const cors = require('cors');
+const path = require('path');
 
 const socketio = require('socket.io');
 const http = require('http');
@@ -12,7 +11,6 @@ const routes = require('./routes');
 const app = express();
 const server = http.Server(app);
 const io = socketio(server);
-app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
 
 
 mongoose.connect(
