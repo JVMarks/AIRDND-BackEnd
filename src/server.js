@@ -61,7 +61,6 @@ server.listen(process.env.PORT || 1119);
 //yarn add multer
 //yarn add socket.io
 
-
 //heroku criar um server 
 // heroku logs -a NOMEDOAPP para ver erros
 //GIT
