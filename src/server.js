@@ -43,6 +43,7 @@ app.use((req, res, next) => {
 app.use(cors());
 app.use(express.json());
 app.use('/files', express.static(path.resolve(__dirname, '..', 'uploads')));
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(routes);
 
 
