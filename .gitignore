@@ -1,5 +1,7 @@
-node_modules
-
 .env
 
-uploads/*
+node_modules
+
+tmp/*
+
+!tmp/.gitkeep

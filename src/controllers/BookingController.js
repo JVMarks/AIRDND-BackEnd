@@ -1,4 +1,4 @@
-const Booking = require('../models/Booking'); 
+const Booking = require('../models/Booking');
 
 module.exports = {
   async store(req, res) {
@@ -16,7 +16,7 @@ module.exports = {
 
     const ownerSocket = req.connectedUsers[booking.spot.user];
 
-    if (ownerSocket){
+    if (ownerSocket) {
       req.io.to(ownerSocket).emit('booking_request', booking);
     }
 
