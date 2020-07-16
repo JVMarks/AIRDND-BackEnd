@@ -1,7 +1,6 @@
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
-const favicon = require('serve-favicon');
 const path = require ('path');
 
 const socketio = require('socket.io');
@@ -12,7 +11,6 @@ const routes = require('./routes');
 const app = express();
 const server = http.Server(app);
 const io = socketio(server);
-app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
 
 
 mongoose.connect('mongodb+srv://omnistack:omnistack@cluster0-apskq.mongodb.net/test?retryWrites=true&w=majority',{
@@ -51,6 +49,11 @@ app.use(routes);
 
 server.listen(process.env.PORT || 1119);
 
+app.use(function (req,res,next){
+	res.status(404).send('Unable to find the requested resource!');
+});
+
+
 //server.listen(1119);
 
 //yarn init -y para baixar o pacote
@@ -60,6 +63,7 @@ server.listen(process.env.PORT || 1119);
 //^C fechar servidors
 //yarn add multer
 //yarn add socket.io
+// npm cache clean --force
 
 
 //heroku criar um server 

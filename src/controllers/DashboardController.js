@@ -1,4 +1,4 @@
-const Spot = require('../models/Spot');
+const Spot = require('../models/Spot.js');
 
 module.exports = {
   async show(req, res) {

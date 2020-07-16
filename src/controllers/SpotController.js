@@ -1,5 +1,5 @@
-const User = require('../models/User');
-const Spot = require('../models/Spot');
+const User = require('../models/User.js');
+const Spot = require('../models/Spot.js');
 
 module.exports = {
   async index(req, res) {
