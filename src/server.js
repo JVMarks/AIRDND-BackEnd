@@ -15,8 +15,7 @@ const io = socketio(server);
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
 
 
-mongoose.connect(
-  'mongodb+srv://omnistack:omnistack@cluster0-apskq.mongodb.net/test?retryWrites=true&w=majority',{
+mongoose.connect('mongodb+srv://omnistack:omnistack@cluster0-apskq.mongodb.net/test?retryWrites=true&w=majority',{
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
@@ -32,6 +31,9 @@ io.on('connection', socket => {
 app.use((req, res, next) => {
   req.io = io;
   req.connectedUsers = connectedUsers;
+
+
+
   return next();
 })
 
